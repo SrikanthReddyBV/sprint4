@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      #catalouge {
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+        grid-gap: 10px;
+        /* border: black solid 2px; */
+      }
+      .product {
+        display: flex;
+        flex-direction: column;
+        max-width: 25%;
+        margin: auto;
+        /* border: solid black 2px; */
+      }
+
+      .product > div > img {
+        max-width: 100%;
+        /* border: dashed red 1px; */
+      }
+      #cartbtn {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Online Jewellary Store</h1>
+    <button id="cartbtn" onclick="cartClicked()">Cart</button>
+    <span
+      ><button id="htoL" onclick="htoL()">Sort by Price High to Low</button
+      ><button id="ltoH" onclick="ltoH()">
+        Sort by Price low to High
+      </button></span
+    >
+    <div id="catalouge"></div>
+  </body>
+</html>
+<script src="products.js"></script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      #catalouge {
+        /* display: grid;
+        grid-template-columns: repeat(5, 20%);
+        grid-gap: 10px; */
+        float: left;
+        /* border: black solid 2px; */
+      }
+      .product {
+        display: flex;
+        flex-direction: column;
+        max-width: 25%;
+        margin: auto;
+        /* border: solid black 2px; */
+      }
+
+      .product > div > img {
+        max-width: 100%;
+        /* border: dashed red 1px; */
+      }
+      #cartbtn {
+        float: right;
+      }
+      #right {
+        float: right;
+        border: black solid 2px;
+        height: 250px;
+        width: 250px;
+        padding: 20px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cart</h1>
+    <div id="catalouge"></div>
+    <div id="right"></div>
+  </body>
+</html>
+<script src="cart.js"></script>

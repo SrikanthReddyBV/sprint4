@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      #address {
+        margin-left: 40%;
+        margin-top: 10%;
+        /* border: black solid 2px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="address">
+      <h3>Full Name</h3>
+      <input id="name" type="text" placeholder="Enter Full Name" />
+      <h3>Full Adress</h3>
+      <input id="add" type="text" placeholder="Enter Adress" />
+      <h3>Email</h3>
+      <input id="email" type="text" placeholder="Enter Email" />
+      <h4>Phone</h4>
+      <input id="phone" type="tel" placeholder="Enter Phone Number" />
+      <button id="orderplaced">Place Order</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  var orderbtn = document.getElementById("orderplaced");
+  orderbtn.addEventListener("click", orderSuccess);
+
+  function orderSuccess() {
+    var name = document.getElementById("name").value;
+    var add = document.getElementById("add").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    if (name == "" || add == "" || email == "" || phone == "") {
+      alert("Enter all fields");
+      name.value = "";
+      add.value = "";
+      email.value = "";
+      phone.value = "";
+    } else {
+      alert("Order Placed Successfully");
+      var success = document.getElementById("address");
+      success.innerHTML += `<h2 style="color:green;">Order Placed Success fully</h2>`;
+    }
+
+    name.value = "";
+    add.value = "";
+    email.value = "";
+    phone.value = "";
+  }
+</script>
